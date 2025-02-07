@@ -3,7 +3,6 @@
 # License: MIT
 from packaging import version
 import pkg_resources
-
 """This file contains all metadata of datasets in TDC.
 
 Attributes:
@@ -94,45 +93,27 @@ toxicity_dataset_names = [
 ]
 
 adme_dataset_names = [
-    "lipophilicity_astrazeneca",
-    "solubility_aqsoldb",
-    "hydrationfreeenergy_freesolv",
-    "caco2_wang",
-    "pampa_ncats",
-    "approved_pampa_ncats",
-    "hia_hou",
-    "pgp_broccatelli",
-    "bioavailability_ma",
-    "vdss_lombardo",
-    "cyp2c19_veith",
-    "cyp2d6_veith",
-    "cyp3a4_veith",
-    "cyp1a2_veith",
-    "cyp2c9_veith",
-    "cyp2c9_substrate_carbonmangels",
-    "cyp2d6_substrate_carbonmangels",
-    "cyp3a4_substrate_carbonmangels",
-    "bbb_martins",
-    "b3db_classification",
-    "b3db_regression",
-    "ppbr_az",
-    "half_life_obach",
-    "clearance_hepatocyte_az",
-    "clearance_microsome_az",
+    "lipophilicity_astrazeneca", "solubility_aqsoldb",
+    "hydrationfreeenergy_freesolv", "caco2_wang", "pampa_ncats",
+    "approved_pampa_ncats", "hia_hou", "pgp_broccatelli", "bioavailability_ma",
+    "vdss_lombardo", "cyp2c19_veith", "cyp2d6_veith", "cyp3a4_veith",
+    "cyp1a2_veith", "cyp2c9_veith", "cyp2c9_substrate_carbonmangels",
+    "cyp2d6_substrate_carbonmangels", "cyp3a4_substrate_carbonmangels",
+    "bbb_martins", "b3db_classification", "b3db_regression", "ppbr_az",
+    "half_life_obach", "clearance_hepatocyte_az", "clearance_microsome_az",
+    "hlm", "rlm"
 ]
 
-hts_dataset_names = ["hiv", 
-    "sarscov2_3clpro_diamond", 
-    "sarscov2_vitro_touret", 
-    "orexin1_receptor_butkiewicz", 
-    "m1_muscarinic_receptor_agonists_butkiewicz", 
-    "m1_muscarinic_receptor_antagonists_butkiewicz", 
-    "potassium_ion_channel_kir2.1_butkiewicz", 
-    "kcnq2_potassium_channel_butkiewicz", 
-    "cav3_t-type_calcium_channels_butkiewicz", 
-    "choline_transporter_butkiewicz", 
-    "serine_threonine_kinase_33_butkiewicz", 
-    "tyrosyl-dna_phosphodiesterase_butkiewicz"]
+hts_dataset_names = [
+    "hiv", "sarscov2_3clpro_diamond", "sarscov2_vitro_touret",
+    "orexin1_receptor_butkiewicz", "m1_muscarinic_receptor_agonists_butkiewicz",
+    "m1_muscarinic_receptor_antagonists_butkiewicz",
+    "potassium_ion_channel_kir2.1_butkiewicz",
+    "kcnq2_potassium_channel_butkiewicz",
+    "cav3_t-type_calcium_channels_butkiewicz", "choline_transporter_butkiewicz",
+    "serine_threonine_kinase_33_butkiewicz",
+    "tyrosyl-dna_phosphodiesterase_butkiewicz"
+]
 
 qm_dataset_names = ["qm7", "qm7b", "qm8", "qm9"]
 
@@ -141,7 +122,6 @@ epitope_dataset_names = ["iedb_jespersen", "pdb_jespersen"]
 paratope_dataset_names = ["sabdab_liberis"]
 
 develop_dataset_names = ["tap", "sabdab_chen"]
-
 
 # multi_pred prediction
 
@@ -166,7 +146,10 @@ gda_dataset_names = ["disgenet"]
 
 crisproutcome_dataset_names = ["leenay"]
 
-drugres_dataset_names = ["gdsc1", "gdsc2"]
+drugres_dataset_names = [
+    "gdsc1",
+    "gdsc2",
+]
 
 drugsyn_dataset_names = ["oncopolypharmacology", "drugcomb"]
 
@@ -176,13 +159,163 @@ yield_dataset_names = ["uspto_yields", "buchwald-hartwig"]
 
 catalyst_dataset_names = ["uspto_catalyst"]
 
-tcr_epi_dataset_names = ["weber"]
+tcr_epi_dataset_names = ["weber", "panpep"]
 
 trial_outcome_dataset_names = ['phase1', 'phase2', 'phase3']
 
+proteinpeptide_dataset_names = ['brown_mdm2_ace2_12ca5']
+
+cellxgene_dataset_names = [
+    "scperturb_drug_AissaBenevolenskaya2021",
+    "scperturb_drug_SrivatsanTrapnell2020_sciplex2",
+    "scperturb_drug_SrivatsanTrapnell2020_sciplex3",
+    "scperturb_drug_SrivatsanTrapnell2020_sciplex4",
+    "scperturb_drug_ZhaoSims2021",
+    "scperturb_gene_NormanWeissman2019",
+    "scperturb_gene_ReplogleWeissman2022_rpe1",
+    "scperturb_gene_ReplogleWeissman2022_k562_essential",
+]
+
+resource_dataset_names = [
+    "opentargets_ra_data_splits",
+    "opentargets_ibd_data_splits",
+    "opentargets_ra_drug_evidence",
+    "opentargets_ibd_drug_evidence",
+    "opentargets_ra_data_splits_idx",
+    "opentargets_ibd_data_splits_idx",
+    "tchard_full",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_test-0",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_test-1",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_test-2",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_test-3",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_test-4",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_train-0",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_train-1",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_train-2",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_train-3",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_train-4",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_test-0",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_test-1",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_test-2",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_test-3",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_test-4",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_train-0",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_train-1",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_train-2",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_train-3",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_train-4",
+    "tchard_pep_cdr3b_only_neg_assays_test-0",
+    "tchard_pep_cdr3b_only_neg_assays_test-1",
+    "tchard_pep_cdr3b_only_neg_assays_test-2",
+    "tchard_pep_cdr3b_only_neg_assays_test-3",
+    "tchard_pep_cdr3b_only_neg_assays_test-4",
+    "tchard_pep_cdr3b_only_neg_assays_train-0",
+    "tchard_pep_cdr3b_only_neg_assays_train-1",
+    "tchard_pep_cdr3b_only_neg_assays_train-2",
+    "tchard_pep_cdr3b_only_neg_assays_train-3",
+    "tchard_pep_cdr3b_only_neg_assays_train-4",
+    "tchard_pep_cdr3b_only_sampled_negs_test-0",
+    "tchard_pep_cdr3b_only_sampled_negs_test-1",
+    "tchard_pep_cdr3b_only_sampled_negs_test-2",
+    "tchard_pep_cdr3b_only_sampled_negs_test-3",
+    "tchard_pep_cdr3b_only_sampled_negs_test-4",
+    "tchard_pep_cdr3b_only_sampled_negs_train-0",
+    "tchard_pep_cdr3b_only_sampled_negs_train-1",
+    "tchard_pep_cdr3b_only_sampled_negs_train-2",
+    "tchard_pep_cdr3b_only_sampled_negs_train-3",
+    "tchard_pep_cdr3b_only_sampled_negs_train-4",
+]
+
+resources = {
+    "opentargets_dti": {
+        "splits": [
+            "opentargets_ra_data_splits",
+            "opentargets_ibd_data_splits",
+        ],
+        "datasets": [
+            "opentargets_ra_drug_evidence",
+            "opentargets_ibd_drug_evidence",
+        ],
+        "all": [
+            "opentargets_ra_data_splits",
+            "opentargets_ibd_data_splits",
+            "opentargets_ra_drug_evidence",
+            "opentargets_ibd_drug_evidence",
+        ],
+    },
+    "tchard": {
+        "splits_raw": {
+            "train": {
+                "tchard_pep_cdr3b_only_neg_assays": {
+                    0: "tchard_pep_cdr3b_only_neg_assays_train-0",
+                    1: "tchard_pep_cdr3b_only_neg_assays_train-1",
+                    2: "tchard_pep_cdr3b_only_neg_assays_train-2",
+                    3: "tchard_pep_cdr3b_only_neg_assays_train-3",
+                    4: "tchard_pep_cdr3b_only_neg_assays_train-4",
+                },
+                "tchard_pep_cdr3b_only_sampled_negs_train": {
+                    0: "tchard_pep_cdr3b_only_sampled_negs_train-0",
+                    1: "tchard_pep_cdr3b_only_sampled_negs_train-1",
+                    2: "tchard_pep_cdr3b_only_sampled_negs_train-2",
+                    3: "tchard_pep_cdr3b_only_sampled_negs_train-3",
+                    4: "tchard_pep_cdr3b_only_sampled_negs_train-4",
+                },
+                "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_train": {
+                    0: "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_train-0",
+                    1: "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_train-1",
+                    2: "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_train-2",
+                    3: "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_train-3",
+                    4: "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_train-4",
+                },
+                "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_train": {
+                    0: "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_train-0",
+                    1: "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_train-1",
+                    2: "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_train-2",
+                    3: "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_train-3",
+                    4: "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_train-4",
+                }
+            },
+            "test": {
+                "tchard_pep_cdr3b_only_neg_assays": {
+                    0: "tchard_pep_cdr3b_only_neg_assays_test-0",
+                    1: "tchard_pep_cdr3b_only_neg_assays_test-1",
+                    2: "tchard_pep_cdr3b_only_neg_assays_test-2",
+                    3: "tchard_pep_cdr3b_only_neg_assays_test-3",
+                    4: "tchard_pep_cdr3b_only_neg_assays_test-4",
+                },
+                "tchard_pep_cdr3b_only_sampled_negs_train": {
+                    0: "tchard_pep_cdr3b_only_sampled_negs_test-0",
+                    1: "tchard_pep_cdr3b_only_sampled_negs_test-1",
+                    2: "tchard_pep_cdr3b_only_sampled_negs_test-2",
+                    3: "tchard_pep_cdr3b_only_sampled_negs_test-3",
+                    4: "tchard_pep_cdr3b_only_sampled_negs_test-4",
+                },
+                "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_train": {
+                    0: "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_test-0",
+                    1: "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_test-1",
+                    2: "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_test-2",
+                    3: "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_test-3",
+                    4: "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_test-4",
+                },
+                "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_train": {
+                    0: "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_test-0",
+                    1: "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_test-1",
+                    2: "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_test-2",
+                    3: "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_test-3",
+                    4: "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_test-4",
+                }
+            },
+            "dev": {}  # no dev set on tchard
+        },
+        "all": ["tchard_full",],
+        "config": {
+            "Y": "label",
+        }
+    },
+}
+
 ####################################
 # generation
-
 
 retrosyn_dataset_names = ["uspto50k", "uspto"]
 
@@ -193,7 +326,6 @@ single_molecule_dataset_names = ["zinc", "moses", "chembl", "chembl_v29"]
 multiple_molecule_dataset_names = ["dude", "pdbbind", "scpdb"]  #'crossdock',
 
 paired_dataset_names = ["uspto50k", "uspto"]
-
 
 ####################################
 # resource
@@ -287,7 +419,6 @@ guacamol_oracle = [
     "scaffold_hop",
 ]
 
-
 ####################################
 # Benchmark Datasets
 
@@ -342,7 +473,10 @@ docking_benchmark = {
 }
 
 docking_target_info = {
-    "3pbl": {"center": (9, 22.5, 26), "size": (15, 15, 15)},
+    "3pbl": {
+        "center": (9, 22.5, 26),
+        "size": (15, 15, 15)
+    },
     "1iep": {
         "center": (15.61389189189189, 53.38013513513513, 15.454837837837842),
         "size": (15, 15, 15),
@@ -355,7 +489,10 @@ docking_target_info = {
         "center": (-9.063639999999998, -7.1446, 55.86259999999999),
         "size": (15, 15, 15),
     },
-    "3ny8": {"center": (2.2488, 4.68495, 51.39820000000001), "size": (15, 15, 15)},
+    "3ny8": {
+        "center": (2.2488, 4.68495, 51.39820000000001),
+        "size": (15, 15, 15)
+    },
     "4rlu": {
         "center": (-0.7359999999999999, 22.75547368421052, -31.2368947368421),
         "size": (15, 15, 15),
@@ -460,13 +597,16 @@ dti_dg_splits = {"bindingdb_patent": "group"}
 ####################################
 
 # evaluator for single molecule, the input of __call__ is a single smiles OR list of smiles
-download_oracle_names = ["drd2", "gsk3b", "jnk3", "fpscores", "cyp3a4_veith", "smina"]
-# download_oracle_names = ['drd2', 'gsk3b', 'jnk3', 'fpscores', 'cyp3a4_veith']
-download_oracle_names = ["drd2", "gsk3b", "jnk3", "fpscores", "cyp3a4_veith"] + [
-    "drd2_current",
-    "gsk3b_current",
-    "jnk3_current",
+download_oracle_names = [
+    "drd2", "gsk3b", "jnk3", "fpscores", "cyp3a4_veith", "smina"
 ]
+# download_oracle_names = ['drd2', 'gsk3b', 'jnk3', 'fpscores', 'cyp3a4_veith']
+download_oracle_names = ["drd2", "gsk3b", "jnk3", "fpscores", "cyp3a4_veith"
+                        ] + [
+                            "drd2_current",
+                            "gsk3b_current",
+                            "jnk3_current",
+                        ]
 
 trivial_oracle_names = ["qed", "logp", "sa"] + guacamol_oracle
 synthetic_oracle_name = ["askcos", "ibm_rxn"]
@@ -503,7 +643,6 @@ download_receptor_oracle_name = [
     "3pbl_docking_vina",
 ]
 
-
 meta_oracle_name = [
     "isomer_meta",
     "rediscovery_meta",
@@ -514,24 +653,16 @@ meta_oracle_name = [
     "pyscreener",
 ]
 
-oracle_names = (
-    download_oracle_names
-    + trivial_oracle_names
-    + distribution_oracles
-    + synthetic_oracle_name
-    + meta_oracle_name
-    + docking_oracles
-    + download_receptor_oracle_name
-)
+oracle_names = (download_oracle_names + trivial_oracle_names +
+                distribution_oracles + synthetic_oracle_name +
+                meta_oracle_name + docking_oracles +
+                download_receptor_oracle_name)
 
 molgenpaired_dataset_names = ["qed", "drd2", "logp"]
 
-generation_datasets = (
-    retrosyn_dataset_names
-    + forwardsyn_dataset_names
-    + molgenpaired_dataset_names
-    + multiple_molecule_dataset_names
-)
+generation_datasets = (retrosyn_dataset_names + forwardsyn_dataset_names +
+                       molgenpaired_dataset_names +
+                       multiple_molecule_dataset_names)
 # generation
 ####################################
 
@@ -548,18 +679,9 @@ category_names = {
         "CRISPROutcome",
     ],
     "multi_pred": [
-        "DTI",
-        "PPI",
-        "DDI",
-        "PeptideMHC",
-        "DrugRes",
-        "AntibodyAff",
-        "DrugSyn",
-        "MTI",
-        "GDA",
-        "Catalyst",
-        "TCR_Epitope_Binding",
-        "TrialOutcome", 
+        "DTI", "PPI", "DDI", "PeptideMHC", "DrugRes", "AntibodyAff", "DrugSyn",
+        "MTI", "GDA", "Catalyst", "TCR_Epitope_Binding", "TrialOutcome",
+        "CellXGene"
     ],
     "generation": ["RetroSyn", "Reaction", "MolGen"],
 }
@@ -599,8 +721,11 @@ dataset_names = {
     "CRISPROutcome": crisproutcome_dataset_names,
     "test_single_pred": test_single_pred_dataset_names,
     "test_multi_pred": test_multi_pred_dataset_names,
-    "TCREpitopeBinding": tcr_epi_dataset_names, 
-    "TrialOutcome": trial_outcome_dataset_names, 
+    "TCREpitopeBinding": tcr_epi_dataset_names,
+    "TrialOutcome": trial_outcome_dataset_names,
+    "ProteinPeptide": proteinpeptide_dataset_names,
+    "CellXGene": cellxgene_dataset_names,
+    "Resource": resource_dataset_names,
 }
 
 benchmark_names = {
@@ -662,14 +787,14 @@ name2type = {
     "hiv": "tab",
     "sarscov2_3clpro_diamond": "tab",
     "sarscov2_vitro_touret": "tab",
-    "orexin1_receptor_butkiewicz": "tab", 
-    "m1_muscarinic_receptor_agonists_butkiewicz": "tab", 
+    "orexin1_receptor_butkiewicz": "tab",
+    "m1_muscarinic_receptor_agonists_butkiewicz": "tab",
     "m1_muscarinic_receptor_antagonists_butkiewicz": "tab",
-    "potassium_ion_channel_kir2.1_butkiewicz": "tab", 
-    "kcnq2_potassium_channel_butkiewicz": "tab", 
-    "cav3_t-type_calcium_channels_butkiewicz": "tab", 
-    "choline_transporter_butkiewicz": "tab", 
-    "serine_threonine_kinase_33_butkiewicz": "tab", 
+    "potassium_ion_channel_kir2.1_butkiewicz": "tab",
+    "kcnq2_potassium_channel_butkiewicz": "tab",
+    "cav3_t-type_calcium_channels_butkiewicz": "tab",
+    "choline_transporter_butkiewicz": "tab",
+    "serine_threonine_kinase_33_butkiewicz": "tab",
     "tyrosyl-dna_phosphodiesterase_butkiewicz": "tab",
     "davis": "tab",
     "kiba": "tab",
@@ -735,10 +860,105 @@ name2type = {
     "primekg": "tab",
     "primekg_drug_feature": "tab",
     "primekg_disease_feature": "tab",
-    "drug_comb_meta_data": "pkl", 
+    "drug_comb_meta_data": "pkl",
     "phase1": "tab",
-    "phase2": "tab", 
-    "phase3": "tab",  
+    "phase2": "tab",
+    "phase3": "tab",
+    "brown_mdm2_ace2_12ca5": "xlsx",
+    "scperturb_drug_AissaBenevolenskaya2021": "h5ad",
+    "scperturb_drug_SrivatsanTrapnell2020_sciplex2": "h5ad",
+    "scperturb_drug_SrivatsanTrapnell2020_sciplex3": "h5ad",
+    "scperturb_drug_SrivatsanTrapnell2020_sciplex4": "h5ad",
+    "scperturb_drug_ZhaoSims2021": "h5ad",
+    "scperturb_gene_NormanWeissman2019": "h5ad",
+    "scperturb_gene_ReplogleWeissman2022_rpe1": "h5ad",
+    "scperturb_gene_ReplogleWeissman2022_k562_essential": "h5ad",
+    "opentargets_ra_data_splits": "json",
+    "opentargets_ra_data_splits_idx": "json",
+    "opentargets_ibd_data_splits": "json",
+    "opentargets_ibd_data_splits_idx": "json",
+    "opentargets_ra_drug_evidence": "tab",
+    "opentargets_ibd_drug_evidence": "tab",
+    "hlm": "tab",
+    "rlm": "tab",
+    "tchard_full": "tab",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_test-0": "tab",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_test-1": "tab",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_test-2": "tab",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_test-3": "tab",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_test-4": "tab",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_train-0": "tab",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_train-1": "tab",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_train-2": "tab",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_train-3": "tab",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_train-4": "tab",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_test-0": "tab",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_test-1": "tab",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_test-2": "tab",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_test-3": "tab",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_test-4": "tab",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_train-0": "tab",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_train-1": "tab",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_train-2": "tab",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_train-3": "tab",
+    "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_train-4": "tab",
+    "tchard_pep_cdr3b_only_neg_assays_test-0": "tab",
+    "tchard_pep_cdr3b_only_neg_assays_test-1": "tab",
+    "tchard_pep_cdr3b_only_neg_assays_test-2": "tab",
+    "tchard_pep_cdr3b_only_neg_assays_test-3": "tab",
+    "tchard_pep_cdr3b_only_neg_assays_test-4": "tab",
+    "tchard_pep_cdr3b_only_neg_assays_train-0": "tab",
+    "tchard_pep_cdr3b_only_neg_assays_train-1": "tab",
+    "tchard_pep_cdr3b_only_neg_assays_train-2": "tab",
+    "tchard_pep_cdr3b_only_neg_assays_train-3": "tab",
+    "tchard_pep_cdr3b_only_neg_assays_train-4": "tab",
+    "tchard_pep_cdr3b_only_sampled_negs_test-0": "tab",
+    "tchard_pep_cdr3b_only_sampled_negs_test-1": "tab",
+    "tchard_pep_cdr3b_only_sampled_negs_test-2": "tab",
+    "tchard_pep_cdr3b_only_sampled_negs_test-3": "tab",
+    "tchard_pep_cdr3b_only_sampled_negs_test-4": "tab",
+    "tchard_pep_cdr3b_only_sampled_negs_train-0": "tab",
+    "tchard_pep_cdr3b_only_sampled_negs_train-1": "tab",
+    "tchard_pep_cdr3b_only_sampled_negs_train-2": "tab",
+    "tchard_pep_cdr3b_only_sampled_negs_train-3": "tab",
+    "tchard_pep_cdr3b_only_sampled_negs_train-4": "tab",
+    "cell_tissue_mg_edgelist": "txt",
+    "pinnacle_global_ppi_edgelist": "txt",
+    "pinnacle_protein_embed": "pth",
+    "pinnacle_labels_dict": "txt",
+    "panpep": "tab",
+    "pinnacle_output1": "zip",
+    "pinnacle_output2": "zip",
+    "pinnacle_output3": "zip",
+    "pinnacle_output4": "zip",
+    "pinnacle_output5": "zip",
+    "pinnacle_output6": "zip",
+    "pinnacle_output7": "zip",
+    "pinnacle_output8": "zip",
+    "pinnacle_output9": "zip",
+    "pinnacle_output10": "zip",
+    "geneformer_gene_median_dictionary": "pkl",
+    "geneformer_gene_name_id_dict": "pkl",
+    "geneformer_token_dictionary": "pkl",
+    "evebio_pharmone_v1_assay_doc": "tab",
+    "evebio_pharmone_v1_assay_table": "tab",
+    "evebio_pharmone_v1_bundle_doc": "tab",
+    "evebio_pharmone_v1_bundle_table": "tab",
+    "evebio_pharmone_v1_compound_doc": "tab",
+    "evebio_pharmone_v1_compound_table": "tab",
+    "evebio_pharmone_v1_control_doc": "tab",
+    "evebio_pharmone_v1_control_table": "tab",
+    "evebio_pharmone_v1_detailed_result_doc": "tab",
+    "evebio_pharmone_v1_detailed_result_table": "tab",
+    "evebio_pharmone_v1_observed_points_doc": "tab",
+    "evebio_pharmone_v1_observed_points_table": "tab",
+    "evebio_pharmone_v1_summary_result_doc": "tab",
+    "evebio_pharmone_v1_summary_result_table": "tab",
+    "evebio_pharmone_v1_target_doc": "tab",
+    "evebio_pharmone_v1_target_table": "tab",
+    "cellxgene_sample_small": "h5ad",
+    "scgpt_vocab": "json",
+    "scvi_test_dataset": "h5ad",
 }
 
 name2id = {
@@ -782,14 +1002,14 @@ name2id = {
     "ppbr_ma": 4259603,
     "sarscov2_3clpro_diamond": 4259606,
     "sarscov2_vitro_touret": 4259607,
-    "orexin1_receptor_butkiewicz": 6894447, 
-    "m1_muscarinic_receptor_agonists_butkiewicz": 6894443, 
+    "orexin1_receptor_butkiewicz": 6894447,
+    "m1_muscarinic_receptor_agonists_butkiewicz": 6894443,
     "m1_muscarinic_receptor_antagonists_butkiewicz": 6894446,
-    "potassium_ion_channel_kir2.1_butkiewicz": 6894442, 
-    "kcnq2_potassium_channel_butkiewicz": 6894444, 
-    "cav3_t-type_calcium_channels_butkiewicz": 6894445, 
-    "choline_transporter_butkiewicz": 6894441, 
-    "serine_threonine_kinase_33_butkiewicz": 6894448, 
+    "potassium_ion_channel_kir2.1_butkiewicz": 6894442,
+    "kcnq2_potassium_channel_butkiewicz": 6894444,
+    "cav3_t-type_calcium_channels_butkiewicz": 6894445,
+    "choline_transporter_butkiewicz": 6894441,
+    "serine_threonine_kinase_33_butkiewicz": 6894448,
     "tyrosyl-dna_phosphodiesterase_butkiewicz": 6894440,
     "solubility_aqsoldb": 4259610,
     "tox21": 4259612,
@@ -849,10 +1069,105 @@ name2id = {
     "primekg": 6180626,
     "primekg_drug_feature": 6180619,
     "primekg_disease_feature": 6180618,
-    "drug_comb_meta_data": 7104245, 
-    "phase1": 7331305, 
-    "phase2": 7331306, 
-    "phase3": 7331307, 
+    "drug_comb_meta_data": 7104245,
+    "phase1": 7331305,
+    "phase2": 7331306,
+    "phase3": 7331307,
+    "brown_mdm2_ace2_12ca5": 9649623,
+    "scperturb_drug_AissaBenevolenskaya2021": 9845396,
+    "scperturb_drug_SrivatsanTrapnell2020_sciplex2": 9845394,
+    "scperturb_drug_SrivatsanTrapnell2020_sciplex3": 9845397,
+    "scperturb_drug_SrivatsanTrapnell2020_sciplex4": 9845395,
+    "scperturb_drug_ZhaoSims2021": 9845393,
+    "scperturb_gene_NormanWeissman2019": 10133995,
+    "scperturb_gene_ReplogleWeissman2022_rpe1": 10133996,
+    "scperturb_gene_ReplogleWeissman2022_k562_essential": 10134031,
+    "opentargets_ra_data_splits": 10141152,
+    "opentargets_ibd_data_splits": 10141151,
+    "opentargets_ra_data_splits_idx": 10143574,
+    "opentargets_ibd_data_splits_idx": 10143573,
+    "opentargets_ra_drug_evidence": 10141153,
+    "opentargets_ibd_drug_evidence": 10141154,
+    "hlm": 10218426,
+    "rlm": 10218425,
+    "tchard_full": 10228321,
+    "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_test-0": 10228304,
+    "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_test-1": 10228296,
+    "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_test-2": 10228328,
+    "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_test-3": 10228299,
+    "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_test-4": 10228330,
+    "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_train-0": 10228331,
+    "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_train-1": 10228334,
+    "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_train-2": 10228324,
+    "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_train-3": 10228325,
+    "tchard_pep_cdr3b_cdr3a_mhc_only_neg_assays_train-4": 10228327,
+    "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_test-0": 10228320,
+    "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_test-1": 10228295,
+    "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_test-2": 10228297,
+    "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_test-3": 10228294,
+    "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_test-4": 10228309,
+    "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_train-0": 10228301,
+    "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_train-1": 10228310,
+    "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_train-2": 10228315,
+    "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_train-3": 10228311,
+    "tchard_pep_cdr3b_cdr3a_mhc_only_sampled_negs_train-4": 10228335,
+    "tchard_pep_cdr3b_only_neg_assays_test-0": 10228300,
+    "tchard_pep_cdr3b_only_neg_assays_test-1": 10228302,
+    "tchard_pep_cdr3b_only_neg_assays_test-2": 10228305,
+    "tchard_pep_cdr3b_only_neg_assays_test-3": 10228298,
+    "tchard_pep_cdr3b_only_neg_assays_test-4": 10228319,
+    "tchard_pep_cdr3b_only_neg_assays_train-0": 10228312,
+    "tchard_pep_cdr3b_only_neg_assays_train-1": 10228317,
+    "tchard_pep_cdr3b_only_neg_assays_train-2": 10228333,
+    "tchard_pep_cdr3b_only_neg_assays_train-3": 10228318,
+    "tchard_pep_cdr3b_only_neg_assays_train-4": 10228314,
+    "tchard_pep_cdr3b_only_sampled_negs_test-0": 10228329,
+    "tchard_pep_cdr3b_only_sampled_negs_test-1": 10228332,
+    "tchard_pep_cdr3b_only_sampled_negs_test-2": 10228303,
+    "tchard_pep_cdr3b_only_sampled_negs_test-3": 10228306,
+    "tchard_pep_cdr3b_only_sampled_negs_test-4": 10228308,
+    "tchard_pep_cdr3b_only_sampled_negs_train-0": 10228323,
+    "tchard_pep_cdr3b_only_sampled_negs_train-1": 10228313,
+    "tchard_pep_cdr3b_only_sampled_negs_train-2": 10228322,
+    "tchard_pep_cdr3b_only_sampled_negs_train-3": 10228316,
+    "tchard_pep_cdr3b_only_sampled_negs_train-4": 10228326,
+    "cell_tissue_mg_edgelist": 10407107,
+    "pinnacle_global_ppi_edgelist": 10407108,
+    "pinnacle_protein_embed": 10407128,
+    "pinnacle_labels_dict": 10409635,
+    "panpep": 10428565,
+    "pinnacle_output1": 10431072,
+    "pinnacle_output2": 10431073,
+    "pinnacle_output3": 10431078,
+    "pinnacle_output4": 10431080,
+    "pinnacle_output5": 10431077,
+    "pinnacle_output6": 10431076,
+    "pinnacle_output7": 10431079,
+    "pinnacle_output8": 10431074,
+    "pinnacle_output9": 10431075,
+    "pinnacle_output10": 10431081,
+    "geneformer_gene_median_dictionary": 10806947,
+    "geneformer_gene_name_id_dict": 10806948,
+    "geneformer_token_dictionary": 10806949,
+    "evebio_pharmone_v1_assay_doc": 10741530,
+    "evebio_pharmone_v1_assay_table": 10741541,
+    "evebio_pharmone_v1_bundle_doc": 10741540,
+    "evebio_pharmone_v1_bundle_table": 10741543,
+    "evebio_pharmone_v1_compound_doc": 10741535,
+    "evebio_pharmone_v1_compound_table": 10741532,
+    "evebio_pharmone_v1_control_doc": 10741539,
+    "evebio_pharmone_v1_control_table": 10741538,
+    "evebio_pharmone_v1_detailed_result_doc": 10741545,
+    "evebio_pharmone_v1_detailed_result_table": 10741534,
+    "evebio_pharmone_v1_observed_points_doc": 10741531,
+    "evebio_pharmone_v1_observed_points_table": 10741544,
+    "evebio_pharmone_v1_summary_result_doc": 10741529,
+    "evebio_pharmone_v1_summary_result_table": 10741542,
+    "evebio_pharmone_v1_target_doc": 10741536,
+    "evebio_pharmone_v1_target_table": 10741537,
+    "cellxgene_sample_small": 10806522,
+    "scgpt_vocab": 10809431,
+    "scvi_test_dataset": 10872157,
 }
 
 oracle2type = {
@@ -880,7 +1195,6 @@ oracle2id = {
     "gsk3b_current": 6413412,
 }
 
-
 benchmark2type = {
     "admet_group": "zip",
     "drugcombo_group": "zip",
@@ -906,7 +1220,6 @@ receptor2id = {
     "7l11": [5137921, 5617660],
     "3pbl": [5257195, 5617666],
 }  ## 'drd3': 5137901,
-
 
 sdf_file_names = {"grambow": ["Product", "Reactant", "TS"]}
 

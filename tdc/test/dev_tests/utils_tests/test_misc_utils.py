@@ -11,10 +11,14 @@ import shutil
 
 # temporary solution for relative imports in case TDC is not installed
 # if TDC is installed, no need to use the following line
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../..")))
+sys.path.append(
+    os.path.abspath(os.path.join(os.path.dirname(__file__), "../../..")))
+sys.path.append(
+    os.path.abspath(os.path.join(os.path.dirname(__file__), "../../..")))
 
 
 class TestFunctions(unittest.TestCase):
+
     def setUp(self):
         print(os.getcwd())
         pass
@@ -25,10 +29,11 @@ class TestFunctions(unittest.TestCase):
         data = PPI(name="HuRI")
         data = data.neg_sample(frac=1)
 
-    # def test_label_distribution(self):
-    #    from tdc.single_pred import ADME
-    #    data = ADME(name='Caco2_Wang')
-    #    x = data.label_distribution()
+    @unittest.skip("this is a visual test and should only be run locally")
+    def test_label_distribution(self):
+        from tdc.single_pred import ADME
+        data = ADME(name='Caco2_Wang')
+        x = data.label_distribution()
 
     def test_get_label_map(self):
         from tdc.multi_pred import DDI
@@ -54,6 +59,7 @@ class TestFunctions(unittest.TestCase):
 
         seq = uniprot2seq("P49122")
 
+    # note - this test might fail locally
     def test_to_graph(self):
         from tdc.multi_pred import DTI
 
@@ -87,6 +93,8 @@ class TestFunctions(unittest.TestCase):
         )
         # output: {'pyg_graph': the PyG graph object, 'index_to_entities': a dict map from ID in the data to node ID in the PyG object, 'split': {'train': df, 'valid': df, 'test': df}}
 
+    #
+    #
     def tearDown(self):
         print(os.getcwd())
 

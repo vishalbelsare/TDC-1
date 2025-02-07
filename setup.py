@@ -19,19 +19,20 @@ def readme():
 
 
 # read the contents of requirements.txt
-with open(path.join(this_directory, "requirements.txt"), encoding="utf-8") as f:
+with open(path.join(this_directory, "requirements.txt"),
+          encoding="utf-8") as f:
     requirements = f.read().splitlines()
 
 setup(
-    name="PyTDC",
+    name="pytdc",
     version=__version__,
     license="MIT",
-    description="Therapeutics Data Commons",
+    description="Therapeutics Commons",
     long_description=readme(),
     long_description_content_type="text/markdown",
     url="https://github.com/mims-harvard/TDC",
-    author="TDC Team",
-    author_email="kexinhuang@hsph.harvard.edu",
+    author="PyTDC Team",
+    author_email="amva13@alum.mit.edu",
     packages=find_packages(exclude=["test"]),
     zip_safe=False,
     include_package_data=True,
